@@ -1,0 +1,16 @@
+name: Weekly Reminders
+on:
+  schedule:
+    - cron: '0 10 * * 1' # Каждый понедельник в 10:00
+  workflow_dispatch:
+
+jobs:
+  reminders:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send weekly reminder
+        run: |
+          echo "📅 Еженедельное напоминание: проверьте открытые Issues и PR"
+          echo "Участники проекта:"
+          echo "- @daryavolkova0007-png"
+          echo "- @kamila-zakiriayeva"
